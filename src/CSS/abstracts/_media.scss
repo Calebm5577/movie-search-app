@@ -1,0 +1,91 @@
+
+@media (max-width: 500px) {
+    html {
+        overflow: visible;
+        background-color: black;
+    }
+
+    #poster {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -65%;
+        left: 17.5%;
+    }
+
+    #search {
+        position: relative;
+        top: 10px;
+        left: 30px;
+        display: block;
+    }
+
+    #search-desktop {
+        display: none;
+    }
+
+
+    #second-div {
+        flex-direction: column;
+
+    }
+
+
+    .third-div-Popularlist {
+        top: 1000px;
+
+
+            &-1st {
+
+            }
+
+            &-2nd {
+                flex-direction: column;
+            }
+
+    
+
+    }
+
+    #related-searches{
+        top: 600px;
+        left: 50px;
+        width: 300px;
+
+    }
+
+    .format-div {
+        display: flex;
+        flex-direction: column;
+        top: 850px;
+    
+        &-title {
+            top: -850px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+        }
+    
+        &-popularity {
+
+            
+        }
+    
+        &-release {
+            
+        }
+    
+        &-voteAVG {
+            
+        }
+        
+        &-overview {
+            
+            
+        }
+    }
+
+
+}
+
+
