@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Calebm5577.github.io/Movie-Search-APP ",
   "name": "moviesearch",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,8 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.0.0",
     "node-sass": "^4.14.1"
   }
 }
