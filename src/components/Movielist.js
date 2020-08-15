@@ -16,6 +16,48 @@ export default class Movielist extends React.Component {
     voteAVG: ""
   }
 
+
+  componentDidMount() {
+    const API_KEY = 'caf02a958f137f43327649b2b8721302';
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=joker`)
+    .then(res => {
+
+      //Related Searches
+      this.setState({ results: res.data.results })
+
+      const similarMovies = res.data.results.slice(1);
+      this.setState({ similarMovies })
+
+      
+      //Background and Moive pictures
+      const poster = res.data['results'][0]['poster_path']
+      this.setState({ poster });
+
+      const background = res.data['results'][0]['backdrop_path']
+      this.setState({ background })
+
+
+      //Searched Movie information
+      const title = res.data['results'][0]['title'];
+      this.setState({ title });
+
+      const popularity = res.data['results'][0]['popularity']
+      this.setState({ popularity });
+
+      const overview = res.data['results'][0]['overview']
+      this.setState({ overview });
+
+      const release = res.data['results'][0]['release_date']
+      this.setState({ release });
+
+      const voteAVG = res.data['results'][0]['vote_average']
+      this.setState({ voteAVG });
+
+
+
+  })
+  }
+
     clickHandler = (event) => {
         if (event.keyCode === 13) {
            const query = event.target.value;
@@ -59,6 +101,9 @@ export default class Movielist extends React.Component {
 
 
 
+      })
+      .catch(error =>{
+        alert("no such movie")
       })
         }
     }

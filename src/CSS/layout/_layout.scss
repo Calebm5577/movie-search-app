@@ -25,7 +25,8 @@ html {
     color: white;
     background-color: transparent;
     position: relative;
-    top: -100px;
+    top: -170px;
+    font-family: 'Inconsolata', monospace;
 }
 
 #main-div {
@@ -53,8 +54,10 @@ html {
     //border: 3px solid orange;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     text-align: center;
     position: relative;
+    top: 10px;
 
     
     &-1st{
@@ -90,7 +93,7 @@ html {
     width: 35vh;
     //border: 3px solid blue;
     left: 5%;
-    top: 43.5%;
+    top: 28.5%;
     padding: 0px;
     margin: 0px 0px 0px 0px;
 }
@@ -100,7 +103,7 @@ html {
     justify-content: center;
     position: relative;
     font-size: 3.5rem;
-    top: 13%;
+    top: 23%;
     color: white;
 
 }
@@ -123,29 +126,31 @@ html {
         margin-top: 2.5%;
         margin-bottom: 2.5%;
         position: relative;
-        top: -290px;
+        top: -390px;
         //border: 3px solid blue;
+        align-self: center;
+        //width: 25%;
     }
 
     &-popularity {
         font-size: 4rem;
         padding: 1%;
         position: relative;
-        top: -25%;
+        top: -35%;
     }
 
     &-release {
         font-size: 4rem;
         padding: 1%;
         position: relative;
-        top: -25%;
+        top: -35%;
     }
 
     &-voteAVG {
         font-size: 4rem;
         padding: 1%;
         position: relative;
-        top: -25%;
+        top: -35%;
     }
     
     &-overview {
@@ -155,7 +160,7 @@ html {
         width: auto;
         font-size: 2rem;
         position: relative;
-        top: -7.5%;
+        top: -23%;
 
     }
 }
@@ -178,13 +183,14 @@ html {
 
 #related-searches {
     display: flex;
+    justify-content: flex-end;
     flex-direction: column;
     color: white;
     font-size: 1.4rem;
-    position: relative;
+    position: absolute;
     text-align: left;
     left: 75%;
-    top: -70%;
+   // top: -70%;
 
 
 }
