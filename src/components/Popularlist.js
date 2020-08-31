@@ -1,6 +1,6 @@
 import React from "react"
 import axios from 'axios';
-import '../CSS/style.css';
+import "../CSS/main.scss"
 
 export default class Popularlist extends React.Component {
     state = {
@@ -23,14 +23,12 @@ export default class Popularlist extends React.Component {
 
     render () {
         return (
-            <div class="third-div-Popularlist">
-                <div class="third-div-Popularlist-1st">
-                <h1 class="third-div-Popularlist-1st-title">Trending</h1>
-                </div>
-                <div class="third-div-Popularlist-2nd">
+            <div class="Popularlist">
+                <div class="Popularlist-Div__popular-map">
+                <h1 class="Popularlist-Div__popular-map-title"><span className="titles">Trending Searches</span></h1>
             {
               this.state.trendingMovies.length && this.state.trendingMovies.map(movie => (
-                <h1 class="third-div-Popularlist-2nd-movies">{movie.title}</h1>
+                <h1 class="Popularlist-2nd-movies">{movie.title}</h1>
               ))
             }
             </div>

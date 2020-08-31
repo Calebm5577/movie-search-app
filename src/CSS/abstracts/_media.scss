@@ -1,110 +1,34 @@
+//Put Popular Movies and Related Searches side by side (display: flex) on 700px
 
-@media (max-width: 500px) {
-    html {
-        overflow: visible;
-        background-color: black;
-    }
-
-    #poster {
+@media only screen and (min-width: 700px) {
+    .Popular-Related-wrapper {
         display: flex;
-        flex-direction: column;
-        position: relative;
-        top: -65%;
-        left: 17.5%;
-    }
-
-    #search {
-        position: relative;
-        top: 10px;
-        left: 30px;
-        display: block;
-    }
-
-    #search-desktop {
-        display: none;
+        justify-content: space-evenly;
     }
 
 
-    #second-div {
-        flex-direction: column;
-
+    .Popularlist{
+        width: 50%;
     }
 
-
-    .third-div-Popularlist {
-        top: 1000px;
-
-
-            &-1st {
-
-            }
-
-            &-2nd {
-                flex-direction: column;
-            }
-
-    
-
-    }
-
-    #related-searches{
-        top: 600px;
-        left: 50px;
-        width: 300px;
-
-    }
-
-    .format-div {
-        display: flex;
-        flex-direction: column;
-        top: 850px;
-    
-        &-title {
-            top: -850px;
-            margin-top: 5%;
-            margin-bottom: 5%;
-
-        }
-    
-        &-popularity {
-
-            
-        }
-    
-        &-release {
-            
-        }
-    
-        &-voteAVG {
-            
-        }
-        
-        &-overview {
-            
-            
-        }
-    }
-
-
-}
-
-@media (max-width: 1100px) {
-    #poster {
-        left: -4px;
+    .movielist-div1-related-searches {
+        width: 50%;
     }
 }
 
-@media (max-width: 1000px) {
+//Center Popular Movies and Related Searches on 1000px
+
+@media only screen and (min-width: 1000px) {
+    .Popular-Related-wrapper {
+        width: 90%;
+    }
+
+    .Popularlist-Div__popular-map {
+        align-items: center;
+    }
+
+    .movielist-div1-related-searches {
+        align-items: center;
+    }
 
 }
-
-@media (max-height: 850px) {
-    #search-desktop {
-        top: 10px;
-    }
-    
-    .format-div-title {
-       
-    }
-}
-

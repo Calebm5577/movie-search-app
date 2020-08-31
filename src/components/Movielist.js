@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import '../CSS/style.css';
 import Popularlist from "./Popularlist"
+import "../CSS/main.scss"
 
 export default class Movielist extends React.Component {
   state = {
@@ -119,28 +119,31 @@ export default class Movielist extends React.Component {
 
 
     return (
-      <div id="main-div" style={backgroundStyle}>
-      <div id="second-div container">
-      <input type="search" id="search" onKeyDown={event => this.clickHandler(event)} placeholder="Search for a Movie"/>
-        <div class="format-div row">
-        <img id="poster" src={`https://image.tmdb.org/t/p/w500${this.state.poster}`} />
-        <input type="search" id="search-desktop" onKeyDown={event => this.clickHandler(event)} placeholder="Search for a Movie"/>
-          <h1 class="format-div-title">Title: {this.state.title}</h1>
-            <h1 class="format-div-popularity">Popularity: {this.state.popularity}</h1>
-            <h1 class="format-div-release">Release: {this.state.release}</h1>
-            <h1 class="format-div-voteAVG">Vote AVG: {this.state.voteAVG}</h1>
-            <h1 class="format-div-overview">Overview: {this.state.overview}</h1>
-            <ol id="related-searches">
+      <>
+      <div className="movielist" style={backgroundStyle}>
+      <input type="search" className="movielist-search" onKeyDown={event => this.clickHandler(event)} placeholder="Search for a Movie"/>
+      <img className="movielist-poster" src={`https://image.tmdb.org/t/p/w500${this.state.poster}`} />
+        <div className="movielist-div1"> 
+            <h1 className="movielist-div1-title"><span className="titles">Title:</span> {this.state.title}</h1>
+            <h1 className="movielist-div1-popularity"><span className="titles">Popularity:</span> {this.state.popularity}</h1>
+            <h1 className="movielist-div1-release"><span className="titles">Release:</span> {this.state.release}</h1>
+            <h1 className="movielist-div1-voteAVG"><span className="titles">Vote AVG:</span> {this.state.voteAVG}</h1>
+            <h1 className="movielist-div1-overview"><span className="titles">Overview:</span> {this.state.overview}</h1>
+              
+              <div className="Popular-Related-wrapper">
+            <div className="movielist-div1-related-searches">
+              <h1><span className="titles">Related Searches</span></h1>
             {
               this.state.similarMovies.length && this.state.similarMovies.map(movie => (
-                <li>{movie.title}</li>
+                <h1>{movie.title}</h1>
               ))
             }
-          </ol>
-        </div>
+          </div>
           <Popularlist />
+            </div>
+        </div>
     </div>
-  </div>
+  </>
     )
   }
 }
