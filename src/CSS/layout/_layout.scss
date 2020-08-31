@@ -19,14 +19,14 @@ html {
         width: 300px;
         font-size: 24px;
         align-self: center;
-        margin-bottom: 2%;
-        margin-top: 2%;
+        margin-bottom: 12px;
+        margin-top: 12px;
     }
 
 
     &-poster {
-        height: 45em;
-        width: 30em;
+        height: 600px;
+        width: 300px;
         align-self: center;
     }
 
@@ -43,34 +43,34 @@ html {
 
 
         &-title {
-            margin-top: 1%;
-            margin-bottom: 1%;
+            margin-top: 8px;
+            margin-bottom: 8px;
             align-self: center;
             
         }
 
         &-popularity{
-            margin-top: 1%;
-            margin-bottom: 1%;
+            margin-top: 8px;
+            margin-bottom: 8px;
             
 
         }
 
         &-release {
-            margin-top: 1%;
-            margin-bottom: 1%;
+            margin-top: 8px;
+            margin-bottom: 8px;
             
         }
 
         &-voteAVG {
-            margin-top: 1%;
-            margin-bottom: 1%;
+            margin-top: 8px;
+            margin-bottom: 8px;
             
         }
 
         &-overview {
-            margin-top: 1%;
-            margin-bottom: 2%;
+            margin-top: 8px;
+            margin-bottom: 16px;
             width: 80%;
         }
 
@@ -79,7 +79,7 @@ html {
         &-related-searches {
             display: flex;
             flex-direction: column;
-            margin-top: 5%;
+            margin-top: 40px;
             list-style: none;
             font-weight: bold;
         }
@@ -88,7 +88,7 @@ html {
 
 
 .Popularlist {
-    margin-top: 5%;
+    margin-top: 40px;
     color: white;
     display: flex;
     flex-direction: column;
