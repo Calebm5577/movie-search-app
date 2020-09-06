@@ -19,7 +19,7 @@ export default class Movielist extends React.Component {
 
 
   componentDidMount() {
-    const API_KEY = process.env.REACT_APP_API;  //'caf02a958f137f43327649b2b8721302'
+    const API_KEY = process.env.REACT_APP_API;  
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=joker`)
     .then(res => {
 
