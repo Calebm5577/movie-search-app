@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Popularlist from "./Popularlist";
 import "../CSS/main.scss";
-// import 'dotenv/config';
 
 export default class Movielist extends React.Component {
   state = {
