@@ -8,7 +8,7 @@ export default class Popularlist extends React.Component {
     }
 
     componentDidMount() {
-           const API_KEY = 'caf02a958f137f43327649b2b8721302';
+           const API_KEY = process.env.REACT_APP_API;
     axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`)
             .then(res => {
 

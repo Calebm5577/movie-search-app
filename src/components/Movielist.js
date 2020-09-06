@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import Popularlist from "./Popularlist"
-import "../CSS/main.scss"
+import Popularlist from "./Popularlist";
+import "../CSS/main.scss";
+// import 'dotenv/config';
 
 export default class Movielist extends React.Component {
   state = {
@@ -18,7 +19,7 @@ export default class Movielist extends React.Component {
 
 
   componentDidMount() {
-    const API_KEY = 'caf02a958f137f43327649b2b8721302';
+    const API_KEY = process.env.REACT_APP_API;  //'caf02a958f137f43327649b2b8721302'
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=joker`)
     .then(res => {
 
@@ -61,7 +62,7 @@ export default class Movielist extends React.Component {
     clickHandler = (event) => {
         if (event.keyCode === 13) {
            const query = event.target.value;
-           const API_KEY = 'caf02a958f137f43327649b2b8721302';
+           const API_KEY = process.env.REACT_APP_API;
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`)
       .then(res => {
 
